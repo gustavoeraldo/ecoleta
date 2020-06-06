@@ -1,0 +1,59 @@
+{# Por meio do extends é possível estender
+o layout padrão, em seguida o nunjucks preenche os campos
+com o conteúdo dos blocos #}
+{% extends "layout.html" %}
+
+{# Alterando id por variável criado no nunjucks #}
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Resultado da pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+
+    {% include "partials/page-header.html" %}
+
+    <main>
+
+        {% if total %}
+            <h4>
+                <strong>{{total}} pontos</strong>
+                encontrados            
+            </h4>
+
+            <div class="cards">
+
+                {% for place in places %}
+                    <div class="card">
+                        <img src="{{place.image}}" alt="{{place.image}}">
+                        <h1>{{place.name}}</h1>
+                        <h3>{{place.items}}</h3>
+
+                        <p>
+                            {{place.city}}, {{place.state}}
+                            <br>
+                            {{place.address}}
+                            <br>
+                            {{place.address2}}
+                        </p>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+        {%else%}
+            <h4>
+                <strong>Nenhum ponto</strong>
+                encontrado            
+            </h4>
+
+        {% endif %}
+        
+    </main>
+
+{% endblock content %}

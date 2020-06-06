@@ -1,0 +1,184 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    /*magin 0 auto: dá um espaçamento automático
+    entre as bordas laterais da tela, você também
+    pode colocar 4 parâmetros que é referente a todas as
+    bordas. Os valores podem ser fixos ou não.*/
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#page-create-point header a{
+    display: flex;
+    color: var(--title-color);
+    /*font-weight: pode ser bold ou 700, representam
+        a mesma coisa*/
+    font-weight: bold;
+    align-items: center;
+}
+
+#page-create-point header a span{
+    /*display flex: permite que a imagem apareça
+    e fique lado a lado com o texto*/
+    display: flex;
+    background-image: url('../assets/arrow-left.svg');
+
+    width: 20px;
+    height: 24px;
+    /*margin right: dá um espaçamento entre a imagem
+    e o texto*/
+    margin-right: 16px;
+}
+
+form {
+    background-color: white;
+    margin: 80px auto;
+    /*padding: preenchimento do background em todas
+    as bordas, caso queira algo específico basta setar
+    o lado desejado como: padding-right*/
+    padding: 64px;
+    border-radius: 8px;
+
+    max-width: 900px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    color: var(--title-color);
+    font-size: 14px;
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input, form select {
+    background-color: var(--background-color);
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    /* Tira a borda preta na caixa de preenchimento ao clicar
+    para digitar */
+    /* outline: none; */
+    border-radius: 8px;
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field {
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border-radius: 8px;
+    border: 0;
+
+    margin-top: 40px;
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    /*  */
+    background-color: #2fb86e;
+}
+
+.items-grid {
+    /* o grid permite organizar o template como uma tabela */
+    display: grid;
+    /* o template-columns é setado como você quer organizar a tabela */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    list-style-type: none;
+
+    border: 2px solid var(--background-color);
+    height: 180px;
+
+    padding: 32px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center; 
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}   
+
+.items-grid li.selected {
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    /* Não faz diferença ao clicar
+    no texto ou na imagem. */
+    pointer-events: none;
+}
