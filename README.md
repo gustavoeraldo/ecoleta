@@ -1,4 +1,4 @@
-<h1 align="center">Ecoleta</h1>
+<h1 align="center">Ecoleta ♻️</h1>
 
 > This work is from **Next Level Week** developed by [Rocketseat](https://rocketseat.com.br/). Is a first step for many programers (self included) 
 and from now the idea is add more features, learn more about the technologies used and be able to create more <br> high level applications.
