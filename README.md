@@ -48,7 +48,6 @@ By the way this command is customizable, so you can change any time going in "sc
 
 👤 **Gustavo Eraldo da Silva**
 
-* Github: [@EraldoCi](https://github.com/EraldoCi)
 * LinkedIn: [@gustavoeraldo](https://linkedin.com/in/gustavoeraldo)
 
 *****
